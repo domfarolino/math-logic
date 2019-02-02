@@ -8,14 +8,14 @@
 variables A B C D : Prop
 
 section
-  example : A ∧ (A → B) → B :=
+  example: A ∧ (A → B) → B :=
     assume h: A ∧ (A → B),
     have hA: A, from and.left h,
     show B, from (and.right h) hA
 end
 
 section
-  example : A → ¬ (¬ A ∧ B) :=
+  example: A → ¬ (¬ A ∧ B) :=
     assume ha: A,
     assume h2: ¬ A ∧ B,
     show false, from (and.left h2) ha -- One of our assumptions from the ND proof
@@ -26,7 +26,7 @@ end
 -- in that it only needs to stop at |C|, similar to how this proof only needs
 -- to stop at |false|.
 section
-  example : ¬ (A ∧ B) → (A → ¬ B) :=
+  example: ¬ (A ∧ B) → (A → ¬ B) :=
     assume h: ¬ (A ∧ B),
     assume hA: A,
     assume hB: B,
@@ -64,6 +64,6 @@ end
 
 -- I do not know how to do this yet. I think it relies on Chapter 5.
 section
-example : ¬ (A ↔ ¬ A) :=
+example: ¬ (A ↔ ¬ A) :=
 sorry
 end
