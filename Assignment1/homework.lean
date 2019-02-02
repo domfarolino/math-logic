@@ -2,7 +2,7 @@
 -- Dom Farolino, farolidm@mail.uc.edu
 -- Math Logic
 
-variables A B C D : Prop
+variables A B C: Prop
 
 -- Exercise 1
 section
@@ -38,4 +38,11 @@ end
 
 -- Exercise 3
 section
+  example: (A ∧ B) → ((A → C) → ¬ (B → ¬ C)) :=
+  assume h1: (A ∧ B),
+  assume h2: (A → C),
+  assume h3: (B → ¬ C),
+  have hc: C, from h2 (and.left h1),
+  have hnc: ¬ C, from h3 (and.right h1),
+  show false, from hnc hc
 end
