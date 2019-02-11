@@ -8,11 +8,21 @@ open classical
 variables A B: Prop
 
 example: A -> ¬¬ A :=
+assume ha: A,
+show ¬¬ A, from
+assume hNotA: ¬ A,
+show false, from hNotA ha
+
+-- ..., or more succictly,
+
+example: A -> ¬¬ A :=
 assume hA: A,
 show ¬¬ A, from
   assume hNA: ¬ A, hNA hA -- (false, in the ND proof).
 
+--
 -- The other direction we must prove with classical reasoning.
+--
 
 example: ¬¬ A -> A :=
 assume h1: ¬¬ A,
