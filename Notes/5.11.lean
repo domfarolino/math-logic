@@ -37,7 +37,7 @@ iff.intro
   (assume hA: A, -- Intuitionistic, must do this version first.
   show ¬¬ A, from
     assume hNA: ¬ A, hNA hA)
-  (assume h1: ¬¬ A, -- By contradiction
+  (assume h1: ¬¬ A, -- By contradiction.
   show A, from by_contradiction(
     assume h2: ¬ A,
     show false, from h1 h2
