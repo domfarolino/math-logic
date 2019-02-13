@@ -15,7 +15,7 @@ constant lt: ℕ -> ℕ -> Prop
 
 variables w x y z: ℕ
 
-#check even(square(y)) /\ odd(square(z))
+#check even(square y) /\ odd(square(z)) -- Note that parens are optional in these cases.
 #check even (add x y) \/ even (x * y)
-#check x < y /\ even(x)
-#check (lt x y) /\ even(x) -> odd(square(z) + y)
+#check x < y /\ even x
+#check (lt x y) /\ even x -> odd(square(z) + y)
