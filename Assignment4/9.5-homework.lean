@@ -3,20 +3,19 @@
 -- Math Logic
 
 -- Exercise 1
--- I've changed |f| to |fn| and |P| to |Prime| just to make it a little more
--- relatable on first consumption; the semantics are unchanged.
 section
-  variable A : Type
-  variable fn : A → A
-  variable Prime : A → Prop
-
-  -- This is a given hypothesis:
-  variable h : ∀ x, Prime x → Prime (fn x)
+  variable A: Type
+  variable f: A → A
+  variable P: A → Prop
+  variable h: ∀ x, P x → P (f x)
 
   -- Show the following:
-  example : ∀ y, Prime y → Prime (fn y) :=
-    assume z, -- Arbitrary value |z|, of type |A|.
-    show Prime z → Prime (fn z), from (h z)
+  -- Scope of ∀ is maximal.
+  example: ∀ y, P y → P (f (f y)) :=
+    assume z: A, -- Arbitrary value |z| of type |A|.
+    assume h2: P z,
+    have h3: P (f z), from (h z) h2, -- Regular implication elimination.
+    show P (f (f z)), from (h (f z)) h3 -- Re-apply |h|.
 end
 
 -- Exercise 2
