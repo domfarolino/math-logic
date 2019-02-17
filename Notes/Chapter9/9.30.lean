@@ -67,3 +67,17 @@ example : (∃ x, A x ∨ B x) → (∃ x, A x) ∨ (∃ x, B x) :=
       have h4: (∃ x, B (x)), from exists.intro y h3,
       or.inr h4)
   )
+
+-- Below is an example proof we did in ND, from Chapter 8:
+
+example : (∀ x, A x → ¬ B x) → ¬ ∃ x, A x ∧ B x :=
+  assume h1: (∀ x, A x → ¬ B x),
+  assume h2: ∃ x, A x ∧ B x,
+  show false, from
+  exists.elim h2 (
+    assume y: U,
+    assume h3: A(y) ∧ B(y),
+    have h4: A(y) → ¬ B(y), from h1 y,
+    have h5: B(y), from and.right h3,
+    show false, from (h4 (and.left h3)) h5
+  )
