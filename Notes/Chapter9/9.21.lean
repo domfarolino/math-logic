@@ -23,3 +23,13 @@ example : ∀ x, B x :=
   h4 h3
 
 -- We can also do the above prove without |have| statements, of course.
+
+-- Another example:
+
+example : (∀ x, A x) → ((∀ x, B x) → (∀ x, A x ∧ B x)) :=
+  assume h1: (∀ x, A x),
+  assume h2: (∀ x, B x),
+  show (∀ x, A x ∧ B x), from
+    assume y: U,
+    show A y ∧ B y, from
+    and.intro (h1 y) (h2 y)
