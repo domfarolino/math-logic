@@ -1,3 +1,7 @@
+-- Assignment 5
+-- Dom Farolino, farolidm@mail.uc.edu
+-- Math Logic
+
 -- Exercise 5
 section
   variable U: Type
