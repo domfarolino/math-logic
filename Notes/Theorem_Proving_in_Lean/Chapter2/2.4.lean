@@ -31,6 +31,20 @@ def square (x: ℕ): ℕ := x * x
 def do_twice (f: ℕ → ℕ) (x: ℕ): ℕ := f (f x)
 def do_twice_longhand: (ℕ → ℕ) → ℕ → ℕ := fun (f: ℕ → ℕ) (x: ℕ), f x
 
+-- Another example of the short- and long-hand definitions:
+section
+  def f (x : ℕ) : ℕ := x + 7
+  def f': ℕ → ℕ := fun (a: ℕ), a + 7
+  def f'' (x: ℕ) (y: ℕ ): ℕ := x + y
+
+  #check f
+  #check f'
+  #check f''
+
+  #reduce f 4
+  #reduce f' 4
+end
+
 -- Examples
 #reduce do_twice double
 #reduce do_twice double 2

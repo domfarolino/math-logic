@@ -36,3 +36,21 @@ section
   #reduce curried_map 10 2
   #reduce uncurry ℕ ℕ ℕ curried_map (10, 2)
 end
+
+-- Exercise 3
+namespace ex3
+  universe u
+
+  constant nil: Π {α: Type u}, list α
+  constant cons: Π {α: Type u}, α → list α → list α
+
+  -- The actual meat of the assignment:
+  constant add_two_vecs : Π {α : Type u}, list α → list α → list α
+  constant reverse_vec: Π {α: Type u}, list α → list α
+
+  variable α: Type
+  variable x: α
+
+  #check add_two_vecs (cons x nil) (cons x nil)
+  #check reverse_vec (cons x (cons x nil))
+end ex3
