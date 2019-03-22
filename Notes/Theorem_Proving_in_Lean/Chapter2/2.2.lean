@@ -16,12 +16,13 @@ constant g: Type → Type → Type
 #check f ℕ
 #check g (f ℕ) α
 
--- Above, saying `constant α: Type` actually created a new type α or us.
+-- Above, saying `constant α: Type` actually created a new type α for us.
 -- We can use this type as follows:
 
 constant m: α
 constant alpha_only_fn: α → α
 #check alpha_only_fn m
+-- #check alpha_only_fn α -- This will not work though.
 
 -- We cannot write, for example: `alpha_only_fn α`, because α is the
 -- Type that the function accepts, therefore we cannot give it the

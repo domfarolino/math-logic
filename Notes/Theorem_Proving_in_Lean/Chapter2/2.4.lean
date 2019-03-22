@@ -57,9 +57,14 @@ def square_twice (x: ℕ): ℕ := do_twice square x
 
 constant a: ℕ
 def do_once (outer: (ℕ → ℕ) → ℕ → ℕ) (inner: ℕ → ℕ) := outer inner
+
+-- Checks and reduces.
+#check do_once
+#check do_once do_twice
+#check do_twice -- Same as above.
+
 #reduce ((do_once do_twice) double) a
 #reduce do_once do_twice double 2
-#reduce do_once
 
 -- Exercise: "We encourage you to try defining a function":
 -- Do_Twice: ((ℕ → ℕ) → (ℕ → ℕ)) → (ℕ → ℕ) → (ℕ → ℕ)

@@ -17,6 +17,10 @@ constant p: ℕ × ℕ
 #check f (p.fst)
 #check f (p.snd)
 
+#check p.fst
+#check (m, n).fst
+
+-- Some more.
 #check (m, n) -- Produces a cartesian product.
 #check (g p.1) p.2
 #check g p.1 p.2 -- Just another way to write the above.

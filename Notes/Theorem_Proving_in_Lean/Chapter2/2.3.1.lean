@@ -9,7 +9,7 @@
 
 -- Creating anonymous functions:
 
--- This function, defined by the `fun` keyword, is namesless,
+-- This function, defined by the `fun` keyword, is nameless,
 -- accepts a parameter named |x| of type |nat|, and returns |x + 1|.
 
 constants α β: Type
