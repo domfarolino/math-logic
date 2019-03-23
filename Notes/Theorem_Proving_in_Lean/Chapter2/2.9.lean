@@ -1,5 +1,9 @@
 -- 2.8 Implicit Arguments
 
+-- Note: I do not indent everything inside the "namespace" one level in
+-- this file, just out of preference, since the entire file basically
+-- exists in the namespace.
+
 -- Assume we have an implementation of our list below:
 
 namespace hidden
