@@ -1,0 +1,36 @@
+(f(P->gR)or((notQ)uP))
+OR
+  F
+    IMPLIES
+      PROP P
+      G
+        PROP R
+  CLOSE
+f P -> g R or not Q u P
+IMPLIES
+  F
+    PROP P
+  OR
+    G
+      PROP R
+    END
+fP or gQ -> PwR
+IMPLIES
+  OR
+    F
+      PROP P
+    G
+      PROP Q
+  END
+Pw(QwR)
+END
+gfP->f(QorS)
+IMPLIES
+  G
+    F
+      PROP P
+  F
+    OR
+      PROP Q
+      PROP S
+

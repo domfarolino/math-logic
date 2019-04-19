@@ -1,0 +1,5 @@
+(f(P->gR)or((notQ)uP))
+f P -> g R or not Q u P
+fP or gQ -> PwR
+Pw(QwR)
+gfP->f(QorS)
