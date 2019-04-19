@@ -1,0 +1,32 @@
+egR
+EG
+  PROP R
+
+ag(Q->egR)
+AG
+  IMPLIES
+    PROP Q
+    EG
+      PROP R
+
+P au ef R
+END
+ef eg P->afR
+IMPLIES
+  EF
+    EG
+      PROP P
+  AF
+    PROP R
+
+P au (QauR)
+END
+(PauQ)euR
+END
+ag(P->(P au (notP and (not PauQ))))
+AG
+  IMPLIES
+    PROP P
+    CLOSE
+ax notP au (ex(PandQ) eu notP)
+END

@@ -1,0 +1,8 @@
+egR
+ag(Q->egR)
+P au ef R
+ef eg P->afR
+P au (QauR)
+(PauQ)euR
+ag(P->(P au (notP and (not PauQ))))
+ax notP au (ex(PandQ) eu notP)
