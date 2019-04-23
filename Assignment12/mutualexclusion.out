@@ -1,0 +1,7 @@
+formula notBeuC
+EU
+  NOT
+    PROP B
+  EU
+    PROP C
+    

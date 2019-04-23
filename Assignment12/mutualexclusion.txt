@@ -1,0 +1,7 @@
+notBeuC
+notCeuB
+ag(T->afC)
+ag(S->afB)
+ag(N->exT)
+ag(M->exS)
+ef(Cand(Ceu(notCand(notBeuC))))

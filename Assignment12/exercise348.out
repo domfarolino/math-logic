@@ -1,0 +1,48 @@
+formula afQ
+AF
+  PROP Q
+AF
+PROP Q
+0 2 3 
+
+formula ag(ef(PorR))
+E2 ::= or T E2
+AG
+  EF
+    OR
+      PROP P
+      PROP R
+AG
+NOT
+EF
+TRUE
+NOT
+EF
+TRUE
+OR
+PROP P
+PROP R
+0 1 2 3 
+
+formula ex(exR)
+EX
+  EX
+    PROP R
+EX
+EX
+PROP R
+0 1 3 
+
+formula ag(afQ)
+AG
+  AF
+    PROP Q
+AG
+NOT
+EF
+TRUE
+NOT
+AF
+PROP Q
+2 3 
+

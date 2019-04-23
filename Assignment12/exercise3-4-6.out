@@ -1,0 +1,31 @@
+formula notP->R
+IMPLIES
+  NOT
+    PROP P
+  PROP R
+IMPLIES
+OR
+NOT
+NOT
+PROP P
+PROP R
+0 1 2 3 
+
+formula not eg R
+NOT
+  EG
+    PROP R
+NOT
+EG
+NOT
+AF
+NOT
+PROP R
+3 
+
+formula TeuQ
+EU
+  PROP T
+  EU
+    PROP Q
+    
